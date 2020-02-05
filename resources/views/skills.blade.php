@@ -25,16 +25,17 @@
     @endforeach
     
 </table>
-    <form action="update" method="POST">
+    <form action="update" method="POST">Entrez l'id de la compétence à modifier : 
         @csrf
-        <input type="text" name="id" placeholder="id de la compétence"><br><br>
+        <input type="text" name="id" placeholder="id"><br><br>
+        Entrez le niveau de la compétence à modifier : 
         <input type="text" name="level" placeholder="Niveau entre 1 et 5 "><br><br>
         <button type="submit"> Modifier </button>
         </form>
-        <br>
-    <form action="delete" method="POST">
+        <br><br>
+    <form action="delete" method="POST">Entrez l'id de la compétence à supprimer :
         @csrf
-        <input type="text" name="id" placeholder="id de la compétence"><br><br>
+        <input type="text" name="id" placeholder="id"><br><br>
         <button type="submit"> Supprimer </button>
         </form>
 

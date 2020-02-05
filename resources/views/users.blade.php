@@ -32,7 +32,7 @@
 
       <br>
   </tr>
- 
+
 </table> 
 
 <a href="{{ route('skill_user') }}">Ajouter une Compétence</a>

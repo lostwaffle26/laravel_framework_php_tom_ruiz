@@ -25,4 +25,13 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function admin(Request $req){
+        return view('home')->withMessage("Admin");
+        }
+
+        public function member(Request $req){
+        return view('home')->withMessage("Member");
+        }
+        
 }
