@@ -15,6 +15,7 @@ class UsersController extends Controller
   {
 
   $users = auth()->user();
+  return $users;
 
     return view('users', [
     'users' => $users, 
@@ -22,10 +23,27 @@ class UsersController extends Controller
 
   }
 
+  public function afficher_users()
+  {
+    $users_admin = User::all();
+    return view('users_admin', [
+      'users'=> $users_admin, 
+      ]);
+  }
+
   public function btn_skill()
     {
       $skills = Skill::all();
       return view('skills', [
+        'skills' => $skills,
+       ]);
+        
+    }
+
+  public function btn_skill_admin()
+    {
+      $skills = Skill::all();
+      return view('skills_admin', [
         'skills' => $skills,
        ]);
         

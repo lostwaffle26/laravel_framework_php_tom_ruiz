@@ -20,7 +20,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-
 Route::get('/users', 'UsersController@afficher')-> name('current_user');
 
 Route::get('/skill_user', 'UsersController@btn_skill')->name('skill_user');
@@ -30,14 +29,7 @@ Route::get('/skill_user/{id}', function ($id) {
     return redirect()->route('current_user');
 });
 
-Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function()
-{
-Route::match(['get', 'post'], '/adminOnlyPage/', 'HomeController@admin');
-});
 
 
 Route::post('update', 'UsersController@update');
 Route::post('delete', 'UsersController@delete');
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

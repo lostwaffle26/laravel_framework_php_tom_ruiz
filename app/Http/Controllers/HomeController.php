@@ -30,7 +30,7 @@ class HomeController extends Controller
         return view('home')->withMessage("Admin");
         }
 
-        public function member(Request $req){
+    public function member(Request $req){
         return view('home')->withMessage("Member");
         }
         
